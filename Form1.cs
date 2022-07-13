@@ -13,7 +13,7 @@ namespace EnhancedPainter
     public partial class Form1 : Form
     {
         Graphics graphics;
-        Boolean cursorMoving = false;
+        bool cursorMoving = false;
         Pen cursorPen;
         int cursorX = -1;
         int cursorY = -1;
@@ -56,6 +56,12 @@ namespace EnhancedPainter
                 cursorX = e.X;
                 cursorY = e.Y;
             }
+        }
+
+        private void smallRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton size = (RadioButton)sender;
+            cursorPen.Width = size.Font.Size;
         }
     }
 }

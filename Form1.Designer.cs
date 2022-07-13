@@ -35,12 +35,18 @@ namespace EnhancedPainter
             this.blueRadioButton = new System.Windows.Forms.RadioButton();
             this.greenRadioButton = new System.Windows.Forms.RadioButton();
             this.blackRadioButton = new System.Windows.Forms.RadioButton();
+            this.sizeGroupBox = new System.Windows.Forms.GroupBox();
+            this.smallRadioButton = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.canvasPanel.SuspendLayout();
             this.colorGroupBox.SuspendLayout();
+            this.sizeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // canvasPanel
             // 
+            this.canvasPanel.Controls.Add(this.sizeGroupBox);
             this.canvasPanel.Controls.Add(this.colorGroupBox);
             this.canvasPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.canvasPanel.Location = new System.Drawing.Point(0, 0);
@@ -53,7 +59,7 @@ namespace EnhancedPainter
             // 
             // colorGroupBox
             // 
-            this.colorGroupBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.colorGroupBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.colorGroupBox.Controls.Add(this.blackRadioButton);
             this.colorGroupBox.Controls.Add(this.greenRadioButton);
             this.colorGroupBox.Controls.Add(this.blueRadioButton);
@@ -117,6 +123,58 @@ namespace EnhancedPainter
             this.blackRadioButton.UseVisualStyleBackColor = true;
             this.blackRadioButton.CheckedChanged += new System.EventHandler(this.blackRadioButton_CheckedChanged);
             // 
+            // sizeGroupBox
+            // 
+            this.sizeGroupBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.sizeGroupBox.Controls.Add(this.radioButton3);
+            this.sizeGroupBox.Controls.Add(this.radioButton2);
+            this.sizeGroupBox.Controls.Add(this.smallRadioButton);
+            this.sizeGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sizeGroupBox.Location = new System.Drawing.Point(13, 211);
+            this.sizeGroupBox.Name = "sizeGroupBox";
+            this.sizeGroupBox.Size = new System.Drawing.Size(115, 146);
+            this.sizeGroupBox.TabIndex = 1;
+            this.sizeGroupBox.TabStop = false;
+            this.sizeGroupBox.Text = "Size";
+            // 
+            // smallRadioButton
+            // 
+            this.smallRadioButton.AutoSize = true;
+            this.smallRadioButton.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.smallRadioButton.Location = new System.Drawing.Point(7, 30);
+            this.smallRadioButton.Name = "smallRadioButton";
+            this.smallRadioButton.Size = new System.Drawing.Size(55, 20);
+            this.smallRadioButton.TabIndex = 0;
+            this.smallRadioButton.TabStop = true;
+            this.smallRadioButton.Text = "Small";
+            this.smallRadioButton.UseVisualStyleBackColor = true;
+            this.smallRadioButton.CheckedChanged += new System.EventHandler(this.smallRadioButton_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(7, 63);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(84, 27);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Medium";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.smallRadioButton_CheckedChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(7, 96);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(97, 39);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Large";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.smallRadioButton_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,6 +186,8 @@ namespace EnhancedPainter
             this.canvasPanel.ResumeLayout(false);
             this.colorGroupBox.ResumeLayout(false);
             this.colorGroupBox.PerformLayout();
+            this.sizeGroupBox.ResumeLayout(false);
+            this.sizeGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -140,6 +200,10 @@ namespace EnhancedPainter
         private System.Windows.Forms.RadioButton greenRadioButton;
         private System.Windows.Forms.RadioButton blueRadioButton;
         private System.Windows.Forms.RadioButton redRadioButton;
+        private System.Windows.Forms.GroupBox sizeGroupBox;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton smallRadioButton;
     }
 }
 
